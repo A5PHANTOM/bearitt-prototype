@@ -1,0 +1,41 @@
+body {
+    background-image: url("assets/loginbg.webp");
+    background-size: cover; /* Ensures the image covers the entire background */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    background-attachment: fixed; /* Keeps the background in place during scrolling */
+    font-family: 'Space Grotesk', sans-serif; /* Ensures your font remains consistent */
+}
+.google-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #fff;
+    color: #444;
+    cursor: pointer;
+}
+.google-btn img {
+    width: 20px;
+}
+.card {
+    background-color: rgba(0, 0, 0, 0.7); /* Black with 70% transparency */
+    color: white; /* Ensure text is visible on dark background */
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.card-title {
+    color: #ffffff; /* White color for the title */
+}
+
+a {
+    color: #00aaff; /* Light blue links for better contrast */
+}
+
+a:hover {
+    color: #0077cc; /* Slightly darker blue on hover */
+}

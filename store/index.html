@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bearitt Stores</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Irish+Grover&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Jaini&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Jacques+Francois&display=swap" rel="stylesheet">
+
+
+    <script src="https://kit.fontawesome.com/54a4546599.js" crossorigin="anonymous"></script>
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper@11/swiper-bundle.min.css" />
+
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="header-left">
+            Logo
+            <div class="logo">
+                <img src="logo.webp" alt="Bearitt Logo">
+            </div>
+            Store Name
+            <div class="store-name">
+                <img src="bearitt.webp" alt="Bearitt name">
+            </div>
+            Highlighted Text
+            <span class="highlight">stores</span>
+        </div> 
+   
+        
+        </div>
+        <nav class="header-middle">
+            <ul>
+                <li><a href="#">New Arrival</a></li>
+                <li><a href="#">Category</a></li>
+                <li><a href="#">Customize</a></li>
+            </ul>
+        </nav>
+        <div class="header-right">
+            <button class="icon-button">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+            <button class="icon-button">
+                <i class="fa-solid fa-cart-shopping"></i>
+            </button>
+        </div>
+        
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-image">
+            <img src="main.webp" alt="Fitness">
+        </div>
+        <div class="hero-text">
+            <h1 class="highlight">BearittUp</h1>
+            <p>Fuel your fitness journey with the best gear and unmatched energy!</p>
+        </div>
+        
+    </section>
+
+
+
+    <div class="swiper-container my-swiper">
+    <div class="swiper-wrapper">
+        <!-- Card 1 -->
+        <div class="swiper-slide">
+            <div class="card-container">
+                <img src="slide1.webp" alt="Card 1" class="card-image">
+            
+                <div class="trending-text">TRENDING</div> 
+                <a href="#" class="shop-now-btn">SHOP NOW</a> 
+            </div>
+        </div>
+        <!-- Card 2 -->
+        <div class="swiper-slide">
+            <div class="card-container">
+                <img src="slide2.webp" alt="Card 2" class="card-image">
+                
+                <div class="trending-text">TRENDING</div> 
+                <a href="#" class="shop-now-btn">SHOP NOW</a> 
+            </div>
+        </div>
+        <!-- Card 3 -->
+        <div class="swiper-slide">
+            <div class="card-container">
+                <img src="slide3.webp" alt="Card 3" class="card-image">
+                
+                <div class="trending-text">TRENDING</div> 
+                <a href="#" class="shop-now-btn">SHOP NOW</a> 
+            </div>
+        </div>
+
+        <div class="swiper-slide">
+            <div class="card-container">
+                <img src="slide4.webp" alt="Card 4" class="card-image">
+                
+                <div class="trending-text">TRENDING</div> 
+                <a href="#" class="shop-now-btn">SHOP NOW</a> 
+            </div>
+        </div>
+    </div>
+</div>
+<script src="script.js"></script>
+
+
+
+
+
+    <section class="carousel-section footwear-section">
+        <h2 class="Jaini">FOOTWEAR</h2>
+
+       
+         <h3>
+            <a href="#" class="view-all">VIEW ALL</a>
+        </h3> 
+    
+       
+        
+        
+        <button class="carousel-btn left-btn" onclick="scrollCarousel('footwear', 'left')">&lt;</button>
+        <div class="carousel-container">
+            <div class="carousel" id="footwear">
+                <!-- Item 1 -->
+                <div class="item tab-1" onclick="enlargeItem(this)">
+                    <div class="plus-btn">+</div>
+                    <img src="shoe1.webp" alt="Shoe 1">
+                   
+                </div>
+                <!-- Item 2 -->
+                <div class="item tab-2" onclick="enlargeItem(this)">
+                    <div class="plus-btn">+</div>
+                    <img src="shoe2.webp" alt="Shoe 2">
+                  
+                </div>
+                <!-- Item 3 -->
+                <div class="item tab-3" onclick="enlargeItem(this)">
+                    <div class="plus-btn">+</div>
+                    <img src="shoe3.webp" alt="Shoe 3">
+                    
+                </div>
+                <!-- Item 4 -->
+                <div class="item tab-4" onclick="enlargeItem(this)">
+                    <div class="plus-btn">+</div>
+                    <img src="shoe4.webp" alt="Shoe 4">
+                    
+                </div>
+                <!-- Item 5 -->
+                <div class="item tab-5" onclick="enlargeItem(this)">
+                    <div class="plus-btn">+</div>
+                    <img src="shoe5.webp" alt="Shoe 5">
+                    
+                </div>
+               <!-- Item 6 -->
+               <div class="item tab-6" onclick="enlargeItem(this)">
+                <div class="plus-btn">+</div>
+                <img src="shoe6.webp" alt="Shoe 6">
+               
+            </div>
+            </div>
+        </div>
+        <button class="carousel-btn right-btn" onclick="scrollCarousel('footwear', 'right')">&gt;</button>
+       
+    </section>
+
+    <script>
+        // Carousel Scrolling Function
+        function scrollCarousel(id, direction) {
+            const carousel = document.getElementById(id);
+            if (direction === 'left') {
+                carousel.scrollBy({ left: -300, behavior: 'smooth' });
+            } else if (direction === 'right') {
+                carousel.scrollBy({ left: 300, behavior: 'smooth' });
+            }
+        }
+
+        // Enlarging Item Function
+        function enlargeItem(element) {
+            const activeItem = document.querySelector('.item.enlarged');
+            if (activeItem) activeItem.classList.remove('enlarged');
+            element.classList.add('enlarged');
+        }
+    </script>
+
+
+
+    <!-- T-SHIRTS SECTION -->
+    <section class="carousel-section tshirts-section">
+        <h2>T-SHIRTS</h2>
+        <h3>
+            <a href="#" class="view-all">VIEW ALL</a>
+        </h3>
+       <button class="carousel-btn left-btn" onclick="scrollCarousel('tshirts', 'left')">&lt;</button>
+        <div class="carousel-container">
+            
+            <div class="carousel" id="tshirts">
+                <div class="item">
+                    <img src="tshirt1.webp" alt="T-Shirt 1">
+                   
+                </div>
+                <div class="item">
+                    <img src="tshirt2.webp" alt="T-Shirt 2">
+                </div>
+                <div class="item">
+                    <img src="tshirt3.webp" alt="T-Shirt 3">
+                </div>
+                <div class="item">
+                    <img src="tshirt4.webp" alt="T-Shirt 4">
+                </div>
+                <div class="item">
+                    <img src="tshirt5.webp" alt="T-Shirt 5">
+                </div>
+            </div>
+        </div>
+        <button class="carousel-btn right-btn" onclick="scrollCarousel('tshirts', 'right')">&gt;</button>
+    </section>
+
+    <!-- Custom Script -->
+    <script>
+        function scrollCarousel(id, direction) {
+            const carousel = document.getElementById(id);
+            const scrollAmount = 300; // Adjust as needed
+            if (direction === 'left') {
+                carousel.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+            } else {
+                carousel.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+            }
+        }
+    </script>
+
+
+
+
+    <!-- Fitness Journey Section -->
+    <section class="fitness-journey">
+        <h2>Your Creative Fitness Journey Starts Here</h2>
+        <p>
+            At <span class="brand-name">Bearitt</span> Fitness Store, we believe in empowering your fitness journey with innovation, style, and functionality. Whether you're just starting or a seasoned athlete, our curated selection of fitness essentials will keep you motivated, comfortable, and performing your best.
+        </p>
+        <p>
+            From cutting-edge workout gear and durable shoes to custom jerseys designed to match your unique style, we’ve got everything you need to achieve your goals. Plus, with our easy-to-use mockup tools, you can bring your creative ideas to life—personalize your fitness apparel and make a statement every time you hit the gym.
+        </p>
+        <p>
+            Explore, create, and conquer—because at Bearitt Fitness, every step counts. Start your journey today!
+        </p>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-brand">
+                <h2><span class="brand-logo">  <img src="logo1.webp" alt="Bearitt Logo"></span></h2>
+            </div> 
+            <div class="footer-columns">
+                <div class="footer-column">
+                    <h4>COMPANY</h4>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Become a Coach</a></li>
+                        <li><a href="#">Help & Support</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>SERVICES</h4>
+                    <ul>
+                        <li><a href="#">Online Coaching</a></li>
+                        <li><a href="#">Corporate Wellness</a></li>
+                        <li><a href="#">Fitness & Nutrition Courses</a></li>
+                        <li><a href="#">Weight Loss Diet Plan</a></li>
+                        <li><a href="#">Diabetes Lifestyle Management</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>LEGAL</h4>
+                    <ul>
+                        <li><a href="#">Terms & Conditions</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Warranty Policy</a></li>
+                        <li><a href="#">Return & Refund Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>TOOLS</h4>
+                    <ul>
+                        <li><a href="#">BMR Calculator</a></li>
+                        <li><a href="#">Macro Calculator</a></li>
+                        <li><a href="#">Body Fat Calculator</a></li>
+                        <li><a href="#">1RM Calculator</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024. All rights reserved</p>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <div id="navbar-placeholder"></div> 
+
+    <title>WOMEN'S  Diet Plan</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Google Font: Zen Dots -->
+    <link href="https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="cut.css">
+    <link rel="stylesheet" href="footer/footer.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;700&display=swap" rel="stylesheet">
+
+
+
+    <!-- <div id="navbar-placeholder"></div>  -->   
+
+    <script src="cut.js" defer></script> <!-- Your JS file -->
+</head>
+<body>
+      <!-- Navigation Bar -->
+     
+    <div class="cut-background"> <!-- Background covering the entire area -->
+        <header>    
+        
+  
+
+        </header>
+
+        <main>
+            <!-- Main Content Section for Cutting Diet Plan -->
+            <section class="cut-heading text-center">
+                <h1>WOMEN'S-DIET PLAN</h1>
+                <div class="cut-description"> </div>
+                <p class="animated-text">PREMIUM AVAILABLE</p>
+            </section>
+        </main>
+    </div> <!-- End of cut-background -->
+
+    <!-- Key Principles Section -->
+    <section class="cut-principles">
+        <div class="text-center">
+            <p class="cutprinc-text animated-text hover-scale" >To maintain a good body structure and overall health, women can focus on a
+                combination of balanced nutrition, exercise, and healthy habits.
+                </p>
+                <div class="flex-container">
+                    <h2 class="cut-subheading">Customizing for Your Needs</h2>
+                </div>
+                <div class="cut-list">
+                    <p><strong>For Bulking:</strong> Add an extra serving of carbs (e.g., rice or roti) and increase the portion size of protein-rich foods like paneer or tofu.</p>
+                    <p><strong>For Maintenance/Lean Muscle:</strong> Keep portions moderate and focus on whole grains and fiber-rich vegetables.</p>
+                </div>
+                
+
+
+                
+        </div>
+        <div class="flex-container">
+            <h2 class="cut-subheading">Key Principles for Nutrition</h2>
+        </div>
+        <ul class="cut-list">
+            <li><strong>1. Protein:</strong> Essential for muscle repair and growth. <br> 
+            <strong>Sources:</strong> Eggs, chicken, fish, turkey, lean mutton, prawns.</li>
+            
+            <li><strong>2. Carbohydrates:</strong> For energy and recovery. <br> 
+            <strong>Sources:</strong> Whole grains (brown rice, quinoa, roti), sweet potatoes, oats, fruits.</li>
+            
+            <li><strong>3. Healthy Fats:</strong> For hormonal health and energy. <br> 
+            <strong>Sources:</strong> Nuts, seeds, ghee, coconut, avocado.</li>
+            
+            <li><strong>4. Vegetables:</strong> For vitamins, minerals, and fiber. <br> 
+            Include greens, root vegetables, and colorful options.</li>
+            
+            <li><strong>5. Hydration:</strong> Drink plenty of water and include electrolyte-rich drinks like coconut water.</li>
+        </ul>
+        
+
+       <!-- Shopping List Button -->
+<button class="shopping-list-btn" onclick="toggleShoppingList()"> <i class="fas fa-shopping-basket"></i> Shopping List</button>
+
+<!-- Shopping List Content -->
+<div id="shopping-list" class="shopping-list">
+    <div class="shopping-category" id="starches">
+        <h3>Starches:</h3>
+        <p>Old-fashioned oats • Quinoa • Sweet potatoes • Russet potatoes • Brown rice • Whole wheat pasta • Whole wheat bread • Chickpeas • Black beans • Butternut squash • Millet</p>
+    </div>
+    
+    <div class="shopping-category" id="proteins">
+        <h3>Proteins:</h3>
+        <p>Large eggs • Liquid egg whites • Greek yogurt (full-fat) • Cottage cheese (2% or full-fat) • Chicken breasts • Lean ground turkey • Salmon fillets • Tofu • Tempeh • Canned tuna • Boneless skinless chicken thighs • Edamame • Ground chicken or turkey</p>
+    </div>
+    
+    <div class="shopping-category" id="fruits-vegetables">
+        <h3>Fruits and Vegetables:</h3>
+        <p>Bananas • Blueberries • Strawberries • Apples • Spinach • Kale • Fresh cauliflower • Broccoli • Zucchini • Sweet bell peppers • Baby carrots • Avocados • Cucumbers • Cherry tomatoes • Beets • Pears • Cantaloupe • Watermelon</p>
+    </div>
+    
+    <div class="shopping-category" id="other-items">
+        <h3>Other Items:</h3>
+        <p>Olive oil • Coconut oil • Almond milk (unsweetened) • Almond flour • Natural peanut butter or almond butter • Chia seeds • Flaxseeds • Whey protein powder • Casein protein powder • Low-sodium vegetable broth • Turmeric • Garlic • Stevia or honey • Dark chocolate (70% cocoa or higher) • Green tea</p>
+    </div>
+    
+</div>
+
+
+
+<!-- Scroll Navigation Box -->
+<div class="scroll-box">
+    <!-- <button onclick="scrollToSection('cutting-diet-plan')">cutting-diet-plan</button> -->
+    <button onclick="scrollToSection('breakfast')">Breakfast</button>
+    <button onclick="scrollToSection('lunch')">Lunch</button>
+    <button onclick="scrollToSection('dinner')">Dinner</button>
+    <button onclick="scrollToSection('snack')">Snack</button>
+    <button onclick="scrollToSection('before-bed')">Before Bed</button>
+</div>
+
+
+
+
+        <!-- Suggested Recipes Section -->
+        <h2 class="suggested-recipes" style="text-align: center;">SUGGESTED RECIPES</h2>
+        <div class="recipe-container">
+
+            <!-- Breakfast Section -->
+            
+            <div class="breakfast-container">
+                <div class="breakfast1">
+                    <h4>Breakfast</h4>
+                    <ul class="cut-list">
+                        <li>2 boiled eggs or an omelet with mixed veggies + 1 or 2 multigrain roti or avocado toast.</li>
+                        <li>Oats smoothie:</li>
+                        <ul>
+                            <li>1 cup oats and milk, with added almonds, walnuts, dates, blueberries, and a banana.</li>
+                            <li>Add a spoonful of honey or peanut butter for extra calories.</li>
+                            <li>Add whey protein (optional).</li>
+                        </ul>
+                        <li>4-5 egg whites</li>
+                        <li>Sweet potato (100 g)</li>
+                        <li>Chana chaat (boiled chickpeas, tomatoes, onions, cucumber, lemon, and spices).</li>
+                        <li>A small piece of fruit (mango, papaya, or apple).</li>
+                        
+                    </ul>
+                </div>
+                <div class="breakfast2">
+                    <img id="breakfast-slide" src="assets/breakfast2.png" alt="Breakfast Slideshow" loading="lazy" style="width: 400px; height: auto; margin-left: 80px;">
+                </div>
+            </div>
+
+
+            <!-- Lunch Section -->
+           <!-- Lunch Section -->
+<!-- Lunch Section -->
+<div class="lunch-container">
+    <!-- Left Container for Image -->
+    <div class="lunch1">
+        <img src="assets/lunch.png" alt="Lunch Image" loading="lazy" style="width: 400px; height: auto; margin-left: 80px;">
+    </div>
+
+    <!-- Right Container for Text Content -->
+    <div class="lunch2">
+        <h4>Lunch</h4>
+        <ul class="cut-list">
+            <li>Brown rice (100g) + Chicken breast (250g)</li>
+<li>Cucumber (1 medium)</li>
+<li>Fish curry or grilled fish (250g) (made with minimal oil, with cream and Indian spices)</li>
+<li>Brown rice (100g)</li>
+
+        </ul>
+    </div>
+</div>
+
+            <!-- Dinner Section -->
+            <div class="dinner-container">
+                <div class="dinner1">
+                   
+                    <ul class="cut-list">
+                        <h4>DINNER</h4>
+                        <li>Grilled chicken breast (100g)</li>
+                        <li>Sautéed spinach or cabbage with mustard seeds and a bit of turmeric.</li>
+                        <li>Whole wheat chapathi (1-2)</li>
+                        <li>Chicken tikka (grilled 100g) or baked chicken with Indian spices.</li>
+                        <li>Vegetable stir fry (use minimal oil, with garlic, cumin, and coriander for flavor).</li>
+                        <li>Brown rice (100g)</li>
+                        <li>Prawns curry (100g)</li>
+                        <li>Sautéed spinach or cabbage with mustard seeds and a bit of turmeric.</li>
+                        <li>Whole wheat chapathi (1-2) or rice (100g)</li>
+                        
+                    </ul>
+                </div>
+                <div class="dinner2">
+                    <img src="assets/dinner.webp" alt="Dinner Image" loading="lazy" style="width: 400px; height: auto; margin-left: 80px;">
+                </div>
+            </div>
+
+            <!-- Snack Section -->
+            <div class="snack-container">
+                <div class="snack1">
+                    <img src="assets/snacks.png" alt="Snacks Image" loading="lazy" style="width: 400px; height: auto; margin-left: 80px;">
+                </div>
+                <div class="snack2">
+                    <h4>Snacks</h4>
+                    <ul class="cut-list">
+                        <li>2 slices of bread with peanut butter and 1 banana</li>
+<li>Greek yogurt (200g) with mixed nuts (almonds, walnuts) and a handful of raisins or dates</li>
+<li>Boiled sweet potato (150g) with a dash of cinnamon</li>
+<li>Hummus (3 tbsp) with carrot and cucumber sticks</li>
+
+                    </ul>
+                </div>
+            </div>
+<!-- Before Bed Section -->
+<div class="before-bed-container">
+    <div class="before-bed1">
+       
+        <ul class="cut-list">
+            <h4>Before Bed</h4>
+            <li>Cottage cheese (100g) with a pinch of black pepper or chili powder.</li>
+<li>A handful of mixed nuts or pumpkin seeds.</li>
+<li>Greek yogurt (100-150g) with honey (1 tsp) or fruit (berries or apple slices).</li>
+<li>A boiled egg.</li>
+<li>Milk (1 glass) with almonds or cashews (5-6 pieces).</li>
+
+        </ul>
+        </ul>
+    </div>
+    <div class="before-bed2">
+        <div class="image-container">
+        <img src="assets/beforebed.webp" alt="Before Bed Image" loading="lazy" style="width: 400px; height: auto; margin-left: 80px; ">
+    </div></div>
+</div>
+<div class="additional-tips">
+    <h2>ADDITIONAL TIPS</h2>
+    <ul>
+        <li>Supplements: Consider supplementing with:
+            <ul>
+                <li>Whey protein (to meet protein goals)</li>
+                <li>Creatine (to support strength and muscle growth)</li>
+                <li>BCAA (for recovery)</li>
+                <li>Fish oil (for healthy fats and joint support)</li>
+            </ul>
+        </li>
+        <li>Caloric Tracking: Track your calories if possible, to ensure you're in a surplus without gaining unnecessary fat.</li>
+        <li>Cooking Methods: Opt for grilling, baking, steaming, and stir-frying with minimal oil.</li>
+    </ul>
+</div>
+
+        </div>
+
+
+        <!-- Cutting Diet Plan for Women Section -->
+<section class="cutting-diet-plan">
+    <div class="text-center">
+        <h2 class="cut-subheading">Cutting Diet Plan for Women</h2>
+        <p class="cutting-guidelines">
+            <strong>General Guidelines:</strong><br>
+            • Meal Frequency: 3 main meals + 2 light snacks.<br>
+            • Cooking Method: Use steaming, grilling, and minimal oil sautéing (opt for coconut oil in moderation).<br>
+            • Portion Control: Limit carbohydrate servings while prioritizing lean proteins and vegetables.<br>
+            • Hydration: Drink plenty of water, herbal teas, or lime-infused warm water.
+        </p>
+    </div>
+
+    <div class="meal-plan">
+        <h3 class="meal-plan-title">Meal Plan Options</h3>
+
+        <!-- Morning (6:30 AM) - Hydration -->
+        <div class="meal-option">
+            <h4>Morning (6:30 AM) - Hydration</h4>
+            <ul>
+                <li><strong>Option 1:</strong> Warm water with lemon and a pinch of turmeric.</li>
+                <li><strong>Option 2:</strong> Jeera water or chia seed water.</li>
+            </ul>
+        </div>
+
+        <!-- Breakfast (7:30 - 8:00 AM) -->
+        <div class="meal-option">
+            <h4>Breakfast (7:30 - 8:00 AM)</h4>
+            <ul>
+                <li><strong>Option 1:</strong> 1 small Puttu (steamed rice flour and coconut) with green gram curry (moong dal) or kadala curry (black chickpeas, minimal coconut).</li>
+                <li><strong>Option 2:</strong> 1-2 Idiyappam (string hoppers) with egg white curry (minimal coconut milk).</li>
+                <li><strong>Option 3:</strong> 1-2 small Dosa (fermented rice-lentil pancake) with fish curry.</li>
+            </ul>
+            <p><strong>Add-ons:</strong> A slice of papaya or a small piece of nenthrappazham (steamed banana).</p>
+        </div>
+
+        <!-- Mid-Morning Snack (10:30 AM) -->
+        <div class="meal-option">
+            <h4>Mid-Morning Snack (10:30 AM)</h4>
+            <ul>
+                <li><strong>Option 1:</strong> 1 boiled egg (without yolk) with a sprinkle of pepper and salt.</li>
+                <li><strong>Option 2:</strong> A handful of roasted peanuts or chana.</li>
+            </ul>
+        </div>
+
+        <!-- Lunch (1:00 PM) -->
+        <div class="meal-option">
+            <h4>Lunch (1:00 PM)</h4>
+            <ul>
+                <li><strong>Option 1:</strong> 1 small cup of red matta rice, sambar or moru curry (minimal oil), stir-fried or steamed vegetables (beans, cabbage, or thoran with less coconut), Protein source: Grilled or lightly pan-fried fish (e.g., sardines or mackerel).</li>
+                <li><strong>Option 2:</strong> Small bowl of kanji (rice porridge) with a side of spicy dry fish chutney (meen curry), steamed vegetables or a light avial (less coconut).</li>
+                <li><strong>Option 3:</strong> 1-2 chapati with chicken stew (light, thin coconut milk gravy) and sautéed greens.</li>
+            </ul>
+        </div>
+
+        <!-- Evening Snack (4:00 PM) -->
+        <div class="meal-option">
+            <h4>Evening Snack (4:00 PM)</h4>
+            <ul>
+                <li><strong>Option 1:</strong> 1 glass of buttermilk with curry leaves and a pinch of salt.</li>
+                <li><strong>Option 2:</strong> A small piece of steamed banana or 1 boiled egg.</li>
+                <li><strong>Option 3:</strong> A small handful of almonds or cashews (unsalted).</li>
+            </ul>
+        </div>
+
+        <!-- Dinner (7:30 - 8:00 PM) -->
+        <div class="meal-option">
+            <h4>Dinner (7:30 - 8:00 PM)</h4>
+            <ul>
+                <li><strong>Option 1:</strong> Grilled fish with a bowl of clear soup (vegetable or chicken stock-based), A small portion of cucumber-tomato salad with lemon.</li>
+                <li><strong>Option 2:</strong> 1 chapati with spicy Kerala-style chicken curry (light gravy, less oil), steamed vegetables or sautéed greens.</li>
+                <li><strong>Option 3:</strong> Oats porridge cooked with tempered shallots, curry leaves, and shredded chicken.</li>
+            </ul>
+        </div>
+
+        <!-- Bedtime Drink (Optional) -->
+        <div class="meal-option">
+            <h4>Bedtime Drink (Optional)</h4>
+            <ul>
+                <li><strong>Option 1:</strong> A cup of warm turmeric milk (use almond or low-fat milk).</li>
+                <li><strong>Option 2:</strong> Warm jeera water.</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+    </section>
+
+    <div id="footer-placeholder"></div>
+</div>
+
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="home.js"></script>
+
+    <!-- JavaScript for Background Color Change on Scroll -->
+    <script>
+
+
+
+
+  // Function to check if an element is in the viewport
+  function isElementInViewport(el) {
+        const rect = el.getBoundingClientRect();
+        return (
+            rect.top >= 0 &&
+            rect.left >= 0 &&
+            rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+            rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+        );
+    }
+
+    // Function to handle scroll event
+    function handleScroll() {
+        const animatedElements = document.querySelectorAll('.animate');
+        animatedElements.forEach(el => {
+            if (isElementInViewport(el)) {
+                el.classList.add('animate');
+            }
+        });
+    }
+
+    // Add scroll event listener
+    window.addEventListener('scroll', handleScroll);
+
+    // Initial check
+    handleScroll();
+
+
+        
+        window.onscroll = function() {
+            var scrollTop = window.scrollY;
+            var backgroundWrapper = document.getElementById("background-wrapper");
+
+            // Change background color based on scroll position
+            if (scrollTop > 800) { // You can adjust this value
+                backgroundWrapper.style.backgroundColor = "black"; // Change to the desired color when scrolled
+            } else {
+                backgroundWrapper.style.backgroundColor = "#D9D9D9"; // Original color
+            }
+        };
+    </script>
+     <script src="footer.js"></script>
+     <script src="navbar.js"></script>
+
+</body>
+</html> 

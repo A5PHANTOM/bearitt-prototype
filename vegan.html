@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VEegan Diet Plan</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Google Font: Zen Dots -->
+    <link href="https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="cut.css">
+    <link rel="stylesheet" href="footer/footer.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;700&display=swap" rel="stylesheet">
+
+
+
+
+    <script src="cut.js" defer></script> <!-- Your JS file -->
+</head>
+<body>
+      <!-- Navigation Bar -->
+      <div id="navbar-placeholder"></div>
+    
+      <div class="cut-background"> <!-- Background covering the entire area -->
+        <main>
+            <!-- Main Content Section for Cutting Diet Plan -->
+            <section class="cut-heading text-center">
+                <h1>VEGAN-DIET</h1>
+                <div class="cut-description"> </div>
+                <p class="animated-text"> aaa </p>
+            </section>
+        </main>
+    </div> <!-- End of cut-background -->
+
+    <!-- Key Principles Section -->
+    <section class="cut-principles">
+        <div class="text-center">
+            <h2>BULKING-DIET</h2>
+            <p class="cutprinc-text animated-text hover-scale" > To build muscle effectively with a bulking diet , it's important to focus on consuming a
+                calorie surplus, while ensuring that the diet is rich in protein, healthy fats, and complex
+                carbohydrates. This helps in muscle recovery and growth without gaining excessive fat.</p>
+        </div>
+        <div class="flex-container">
+            <h2 class="cut-subheading">Key Principles of a Bulking Diet:</h2>
+        </div>
+        <ul class="cut-list">
+            <li><strong>Calorie Surplus</strong>: Aim for a 10-20% increase in your daily calorie intake compared to
+                your maintenance level.</li>
+            <li><strong>Protein:</strong> : About 1.6–2.2 grams of protein per kilogram of body weight. This will help
+                in muscle repair and growth</li>
+            <li><strong>Carbohydrates:</strong> : Carbs are your primary energy source, so make sure you’re eating
+                enough to fuel your workouts and recovery.( 45-60% of total daily intake)</li>
+            <li><strong>Healthy Fats:</strong> Include good fats from sources like nuts, seeds, ghee, and oils to
+                support hormone function and overall health.( : 20-30% of total daily intake)</li>
+            
+        </ul>
+
+        <div class="flex-container">
+            <h2 class="cut-subheading">MAIN PROTEIN SOURCES</h2>
+        </div>
+        <ul class="cut-list">
+            <li><strong>Paneer (Cottage Cheese):</strong> High in protein and healthy fats. Add it to curries, grilled dishes, or salads.</li>
+    <li><strong>Lentils (Dal):</strong> Rich in protein and fiber. Have a variety like toor dal, moong dal, or masoor dal daily.</li>
+    <li><strong>Chickpeas (Chana):</strong> Include chole or roasted chickpeas as snacks or in curries.</li>
+    <li><strong>Kidney Beans (Rajma):</strong> Excellent source of protein, pair with rice for a complete protein meal.</li>
+    <li><strong>Soy Products:</strong> Tofu, soy nuggets, and soy milk are excellent protein sources.</li>
+    <li><strong>Quinoa:</strong> A complete protein that can be used in place of rice.</li>
+    <li><strong>Greek Yogurt:</strong> A rich source of protein, especially for snacks or breakfast.</li>
+    <li><strong>Nuts and Seeds:</strong> Almonds, peanuts, chia seeds, and flaxseeds provide good fat and protein.</li>
+    <li><strong>Milk & Dairy Products:</strong> Include full-fat milk, curd, and buttermilk for extra calories and protein.</li>pport hormone function and overall health.( : 20-30% of total daily intake)</li>
+            
+        </ul>
+
+
+       <!-- Shopping List Button -->
+<button class="shopping-list-btn" onclick="toggleShoppingList()"> <i class="fas fa-shopping-basket"></i> Shopping List</button>
+
+<!-- Shopping List Content -->
+<div id="shopping-list" class="shopping-list">
+    <div class="shopping-category" id="starches">
+        <h3>Starches:</h3>
+        <p>Old-fashioned oats • Pre-rinsed quinoa • Brown rice • Sweet potatoes • Russet potatoes • Whole wheat pasta • Ezekiel bread • Farro • Millet • Lentils • Canned chickpeas</p>
+    </div>
+
+    <div class="shopping-category" id="proteins">
+        <h3>Proteins:</h3>
+        <p>Firm tofu • Tempeh • Seitan • Edamame • Canned black beans • Canned kidney beans • Lentils • TVP (textured vegetable protein) • Vegan protein powder • Nutritional yeast • Peanut butter • Almond butter</p>
+    </div>
+
+    <div class="shopping-category" id="fruits-vegetables">
+        <h3>Fruits and Vegetables:</h3>
+        <p>Navel oranges • Bananas • Fresh baby spinach • Kale • Broccoli • Bell peppers • Avocados • Apples • Zucchini • Yellow squash • Sweet corn • Carrots • Butternut squash • Blueberries • Strawberries • Mushrooms</p>
+    </div>
+
+    <div class="shopping-category" id="other-items">
+        <h3>Other Items:</h3>
+        <p>Chia seeds • Flaxseeds • Hemp seeds • Coconut milk • Almond milk • Cashews • Walnuts • Tahini • Olive oil • Sunflower seeds • Unsweetened cocoa powder • Agave syrup • Dark chocolate (70% or higher)</p>
+    </div>
+</div>
+
+
+
+<!-- Scroll Navigation Box -->
+<div class="scroll-box">
+    <button onclick="scrollToSection('breakfast')">Breakfast</button>
+    <button onclick="scrollToSection('lunch')">Lunch</button>
+    <button onclick="scrollToSection('dinner')">Dinner</button>
+    <button onclick="scrollToSection('snack')">Snack</button>
+    <button onclick="scrollToSection('before-bed')">Before Bed</button>
+</div>
+
+
+
+
+        <!-- Suggested Recipes Section -->
+        <h2 class="suggested-recipes" style="text-align: center;">SUGGESTED RECIPES</h2>
+        <div class="recipe-container">
+
+            <!-- Breakfast Section -->
+            
+            <div class="breakfast-container">
+                <div class="breakfast1">
+                    <h4>Breakfast</h4>
+                    <ul class="cut-list">
+                        <li>Oats with Nuts and Fruits<br>
+                            • Oats cooked in milk, with added almonds, walnuts, and a banana. Add a spoonful of honey or peanut butter for extra calories.</li>
+                        <li>Dosa or Idli (4-5) and sambhar with lots of vegetables<br>
+                            • Masala chai or black coffee.</li>
+                        <li>Paneer or Tofu Bhurji with Whole Wheat Toast<br>
+                            • Scrambled paneer/tofu with onions, tomatoes, and spices. Serve with whole wheat toast for a hearty meal.</li>
+                        <li>Chickpea Curry with Chapathi or Puttu<br>
+                            • Chapathi or puttu (3-4 medium) and ghee (1 tsp), and pomegranate or apple slices.<br>
+                            • Chickpea curry<br>
+                            • Masala chai or black coffee.</li>
+                    </ul>
+                    
+                </div>
+                <div class="breakfast2">
+                    <img id="breakfast-slide" src="assets/breakfast2.png" alt="Breakfast Slideshow" loading="lazy" style="width: 400px; height: auto; margin-left: 80px;">
+                </div>
+            </div>
+
+
+            <!-- Lunch Section -->
+           <!-- Lunch Section -->
+<!-- Lunch Section -->
+<div class="lunch-container">
+    <!-- Left Container for Image -->
+    <div class="lunch1">
+        <img src="assets/lunch.png" alt="Lunch Image" loading="lazy" style="width: 400px; height: auto; margin-left: 80px;">
+    </div>
+
+    <!-- Right Container for Text Content -->
+    <div class="lunch2">
+        <h4>Lunch</h4>
+        <ul class="cut-list">
+            <li>Brown Rice with Dal and Vegetables<br>
+                • Brown rice or quinoa with dal (lentils), sautéed veggies, and a salad. Add ghee for healthy fats.</li>
+            <li>Rajma Chawal (Kidney Beans with Rice)<br>
+                • Rajma with brown or white rice, a salad, and a bowl of curd.</li>
+            <li>Paneer Tikka with Steamed Veggies<br>
+                • Serve with roti or brown rice.</li>
+            <li>Sambhar and Brown Rice with Lots of Vegetables</li>
+            <li>Soybean and Vegetable Stir-Fry with Millet<br>
+                • Ingredients: Soybeans, bell peppers, broccoli, carrots, millet, and sesame oil.<br>
+                • Serve with roti or brown rice.</li>
+        </ul>
+        
+    </div>
+</div>
+
+            <!-- Dinner Section -->
+            <div class="dinner-container">
+                <div class="dinner1">
+                   
+                    <ul class="cut-list">
+                        <h4>DINNER</h4>
+                        <li>Paneer or Tofu Bhurji with Whole Wheat Toast<br>
+                            • Scrambled paneer/tofu with onions, tomatoes, and spices. Serve with whole wheat toast for a hearty meal.</li>
+                        <li>Chickpea and Quinoa Pulao with Mixed Vegetables<br>
+                            • Quinoa is cooked with chickpeas, carrots, peas, and bell peppers. Add a spoonful of olive oil or coconut oil for extra calories. This dish provides a balance of carbs, protein, and fats.</li>
+                        <li>Stuffed Sweet Potatoes with Lentils<br>
+                            • Sweet potatoes are baked and filled with spiced lentils. Add some avocado slices or crushed walnuts for extra healthy fats.</li>
+                        <li>Mushroom and Spinach Masala with Basmati Rice<br>
+                            • A rich mushroom and spinach curry with coconut milk, tomatoes, and spices, served with basmati rice. Adding a handful of cashews or almonds can boost the calorie count.</li>
+                    </ul>
+                    
+                </div>
+                <div class="dinner2">
+                    <img src="assets/dinner.webp" alt="Dinner Image" loading="lazy" style="width: 400px; height: auto; margin-left: 80px;">
+                </div>
+            </div>
+
+            <!-- Snack Section -->
+            <div class="snack-container">
+                <div class="snack1">
+                    <img src="assets/snacks.png" alt="Snacks Image" loading="lazy" style="width: 400px; height: auto; margin-left: 80px;">
+                </div>
+                <div class="snack2">
+                    <h4>Snacks</h4>
+                    <ul class="cut-list">
+                        <li>Greek yogurt (200g) with mixed nuts (almonds, walnuts) and a handful of raisins or dates.</li>
+                        <li>Chana chaat (boiled chickpeas, tomatoes, onions, cucumber, lemon, and spices).<br>
+                            • A small piece of fruit (mango, papaya, or apple).</li>
+                        <li>Protein smoothie with whey protein (1 scoop), banana, oats (30g), and almond milk or regular milk.</li>
+                        <li>Paneer tikka (grilled, without oil) with a cucumber salad.</li>
+                    </ul>
+                </div>
+                
+            </div>
+<!-- Before Bed Section -->
+<div class="before-bed-container">
+    <div class="before-bed1">
+       
+        <ul class="cut-list">
+            <h4>Before Bed</h4>
+            <li>Cottage cheese (100g) with a pinch of black pepper or chili powder.</li>
+            <li>A handful of mixed nuts or pumpkin seeds.</li>
+            <li>Greek yogurt (100-150g) with honey (1 tsp) or fruit (berries or apple slices).</li>
+            <li>Milk (1 glass) with almonds or cashews (5-6 pieces).</li>
+        </ul>
+    </div>
+    <div class="before-bed2">
+        <div class="image-container">
+        <img src="assets/beforebed.webp" alt="Before Bed Image" loading="lazy" style="width: 400px; height: auto; margin-left: 80px; ">
+    </div></div>
+</div>
+<div class="additional-tips">
+    <h2>ADDITIONAL TIPS</h2>
+    <ul>
+        <li><strong>Spices:</strong> Indian spices like turmeric, cumin, coriander, ginger, and garlic are not only flavorful but also help in boosting metabolism.</li>
+        <li><strong>Protein:</strong> Aim for 1.6-2g of protein per kg of body weight.</li>
+        <li><strong>Carbs:</strong> Prefer complex carbs like oats, quinoa, brown rice, and millets (ragi, bajra).</li>
+        <li><strong>Healthy Fats:</strong> Include sources like almonds, walnuts, flax seeds, and olive oil in moderation.</li>
+        <li><strong>Cooking Methods:</strong> Opt for grilling, baking, steaming, and stir-frying with minimal oil.</li>
+    </ul>
+</div>
+
+
+
+
+
+
+    <!-- Key Principles Section -->
+    <section class="cut-principles">
+        <div class="text-center">
+            <h2>CUTTING-DIET</h2>
+            <p class="cutprinc-text animated-text hover-scale" > To build muscle effectively with a bulking diet , it's important to focus on consuming a
+                calorie surplus, while ensuring that the diet is rich in protein, healthy fats, and complex
+                carbohydrates. This helps in muscle recovery and growth without gaining excessive fat.</p>
+        </div>
+        <div class="flex-container">
+            <h2 class="cut-subheading">Key Principles of a Bulking Diet:</h2>
+        </div>
+        <ul class="cut-list">
+            <li><strong>Calorie Surplus</strong>: Aim for a 10-20% increase in your daily calorie intake compared to
+                your maintenance level.</li>
+            <li><strong>Protein:</strong> : About 1.6–2.2 grams of protein per kilogram of body weight. This will help
+                in muscle repair and growth</li>
+            <li><strong>Carbohydrates:</strong> : Carbs are your primary energy source, so make sure you’re eating
+                enough to fuel your workouts and recovery.( 45-60% of total daily intake)</li>
+            <li><strong>Healthy Fats:</strong> Include good fats from sources like nuts, seeds, ghee, and oils to
+                support hormone function and overall health.( : 20-30% of total daily intake)</li>
+            
+        </ul>
+
+        <div class="flex-container">
+            <h2 class="cut-subheading">MAIN PROTEIN SOURCES</h2>
+        </div>
+        <ul class="cut-list">
+            <li><strong>Paneer (Cottage Cheese):</strong> High in protein and healthy fats. Add it to curries, grilled dishes, or salads.</li>
+    <li><strong>Lentils (Dal):</strong> Rich in protein and fiber. Have a variety like toor dal, moong dal, or masoor dal daily.</li>
+    <li><strong>Chickpeas (Chana):</strong> Include chole or roasted chickpeas as snacks or in curries.</li>
+    <li><strong>Kidney Beans (Rajma):</strong> Excellent source of protein, pair with rice for a complete protein meal.</li>
+    <li><strong>Soy Products:</strong> Tofu, soy nuggets, and soy milk are excellent protein sources.</li>
+    <li><strong>Quinoa:</strong> A complete protein that can be used in place of rice.</li>
+    <li><strong>Greek Yogurt:</strong> A rich source of protein, especially for snacks or breakfast.</li>
+    <li><strong>Nuts and Seeds:</strong> Almonds, peanuts, chia seeds, and flaxseeds provide good fat and protein.</li>
+    <li><strong>Milk & Dairy Products:</strong> Include full-fat milk, curd, and buttermilk for extra calories and protein.</li>pport hormone function and overall health.( : 20-30% of total daily intake)</li>
+            
+        </ul>
+
+
+       <!-- Shopping List Button -->
+<button class="shopping-list-btn" onclick="toggleShoppingList()"> <i class="fas fa-shopping-basket"></i> Shopping List</button>
+
+<!-- Shopping List Content -->
+<div id="shopping-list" class="shopping-list">
+    <div class="shopping-category" id="starches">
+        <h3>Starches:</h3>
+        <p>Old-fashioned oats • Pre-rinsed quinoa • Brown rice • Sweet potatoes • Russet potatoes • Whole wheat pasta • Ezekiel bread • Farro • Millet • Lentils • Canned chickpeas</p>
+    </div>
+
+    <div class="shopping-category" id="proteins">
+        <h3>Proteins:</h3>
+        <p>Firm tofu • Tempeh • Seitan • Edamame • Canned black beans • Canned kidney beans • Lentils • TVP (textured vegetable protein) • Vegan protein powder • Nutritional yeast • Peanut butter • Almond butter</p>
+    </div>
+
+    <div class="shopping-category" id="fruits-vegetables">
+        <h3>Fruits and Vegetables:</h3>
+        <p>Navel oranges • Bananas • Fresh baby spinach • Kale • Broccoli • Bell peppers • Avocados • Apples • Zucchini • Yellow squash • Sweet corn • Carrots • Butternut squash • Blueberries • Strawberries • Mushrooms</p>
+    </div>
+
+    <div class="shopping-category" id="other-items">
+        <h3>Other Items:</h3>
+        <p>Chia seeds • Flaxseeds • Hemp seeds • Coconut milk • Almond milk • Cashews • Walnuts • Tahini • Olive oil • Sunflower seeds • Unsweetened cocoa powder • Agave syrup • Dark chocolate (70% or higher)</p>
+    </div>
+</div>
+
+
+
+<!-- Scroll Navigation Box -->
+<div class="scroll-box">
+    <button onclick="scrollToSection('breakfast')">Breakfast</button>
+    <button onclick="scrollToSection('lunch')">Lunch</button>
+    <button onclick="scrollToSection('dinner')">Dinner</button>
+    <button onclick="scrollToSection('snack')">Snack</button>
+    <button onclick="scrollToSection('before-bed')">Before Bed</button>
+</div>
+
+
+
+
+        <!-- Suggested Recipes Section -->
+        <h2 class="suggested-recipes" style="text-align: center;">SUGGESTED RECIPES</h2>
+        <div class="recipe-container">
+
+            <!-- Breakfast Section -->
+            
+            <div class="breakfast-container">
+                <div class="breakfast1">
+                    <h4>Breakfast</h4>
+                    <ul class="cut-list">
+                        <li>Oats with Nuts and Fruits<br>
+                            • Oats cooked in milk, with added almonds, walnuts, and a banana. Add a spoonful of honey or peanut butter for extra calories.</li>
+                        <li>Dosa or Idli (4-5) and sambhar with lots of vegetables<br>
+                            • Masala chai or black coffee.</li>
+                        <li>Paneer or Tofu Bhurji with Whole Wheat Toast<br>
+                            • Scrambled paneer/tofu with onions, tomatoes, and spices. Serve with whole wheat toast for a hearty meal.</li>
+                        <li>Chickpea Curry with Chapathi or Puttu<br>
+                            • Chapathi or puttu (3-4 medium) and ghee (1 tsp), and pomegranate or apple slices.<br>
+                            • Chickpea curry<br>
+                            • Masala chai or black coffee.</li>
+                    </ul>
+                    
+                </div>
+                <div class="breakfast2">
+                    <img id="breakfast-slide" src="assets/breakfast2.png" alt="Breakfast Slideshow" loading="lazy" style="width: 400px; height: auto; margin-left: 80px;">
+                </div>
+            </div>
+
+
+            <!-- Lunch Section -->
+           <!-- Lunch Section -->
+<!-- Lunch Section -->
+<div class="lunch-container">
+    <!-- Left Container for Image -->
+    <div class="lunch1">
+        <img src="assets/lunch.png" alt="Lunch Image" loading="lazy" style="width: 400px; height: auto; margin-left: 80px;">
+    </div>
+
+    <!-- Right Container for Text Content -->
+    <div class="lunch2">
+        <h4>Lunch</h4>
+        <ul class="cut-list">
+            <li>Brown Rice with Dal and Vegetables<br>
+                • Brown rice or quinoa with dal (lentils), sautéed veggies, and a salad. Add ghee for healthy fats.</li>
+            <li>Rajma Chawal (Kidney Beans with Rice)<br>
+                • Rajma with brown or white rice, a salad, and a bowl of curd.</li>
+            <li>Paneer Tikka with Steamed Veggies<br>
+                • Serve with roti or brown rice.</li>
+            <li>Sambhar and Brown Rice with Lots of Vegetables</li>
+            <li>Soybean and Vegetable Stir-Fry with Millet<br>
+                • Ingredients: Soybeans, bell peppers, broccoli, carrots, millet, and sesame oil.<br>
+                • Serve with roti or brown rice.</li>
+        </ul>
+        
+    </div>
+</div>
+
+            <!-- Dinner Section -->
+            <div class="dinner-container">
+                <div class="dinner1">
+                   
+                    <ul class="cut-list">
+                        <h4>DINNER</h4>
+                        <li>Paneer or Tofu Bhurji with Whole Wheat Toast<br>
+                            • Scrambled paneer/tofu with onions, tomatoes, and spices. Serve with whole wheat toast for a hearty meal.</li>
+                        <li>Chickpea and Quinoa Pulao with Mixed Vegetables<br>
+                            • Quinoa is cooked with chickpeas, carrots, peas, and bell peppers. Add a spoonful of olive oil or coconut oil for extra calories. This dish provides a balance of carbs, protein, and fats.</li>
+                        <li>Stuffed Sweet Potatoes with Lentils<br>
+                            • Sweet potatoes are baked and filled with spiced lentils. Add some avocado slices or crushed walnuts for extra healthy fats.</li>
+                        <li>Mushroom and Spinach Masala with Basmati Rice<br>
+                            • A rich mushroom and spinach curry with coconut milk, tomatoes, and spices, served with basmati rice. Adding a handful of cashews or almonds can boost the calorie count.</li>
+                    </ul>
+                    
+                </div>
+                <div class="dinner2">
+                    <img src="assets/dinner.webp" alt="Dinner Image" loading="lazy" style="width: 400px; height: auto; margin-left: 80px;">
+                </div>
+            </div>
+
+            <!-- Snack Section -->
+            <div class="snack-container">
+                <div class="snack1">
+                    <img src="assets/snacks.png" alt="Snacks Image" loading="lazy" style="width: 400px; height: auto; margin-left: 80px;">
+                </div>
+                <div class="snack2">
+                    <h4>Snacks</h4>
+                    <ul class="cut-list">
+                        <li>Greek yogurt (200g) with mixed nuts (almonds, walnuts) and a handful of raisins or dates.</li>
+                        <li>Chana chaat (boiled chickpeas, tomatoes, onions, cucumber, lemon, and spices).<br>
+                            • A small piece of fruit (mango, papaya, or apple).</li>
+                        <li>Protein smoothie with whey protein (1 scoop), banana, oats (30g), and almond milk or regular milk.</li>
+                        <li>Paneer tikka (grilled, without oil) with a cucumber salad.</li>
+                    </ul>
+                </div>
+                
+            </div>
+<!-- Before Bed Section -->
+<div class="before-bed-container">
+    <div class="before-bed1">
+       
+        <ul class="cut-list">
+            <h4>Before Bed</h4>
+            <li>Cottage cheese (100g) with a pinch of black pepper or chili powder.</li>
+            <li>A handful of mixed nuts or pumpkin seeds.</li>
+            <li>Greek yogurt (100-150g) with honey (1 tsp) or fruit (berries or apple slices).</li>
+            <li>Milk (1 glass) with almonds or cashews (5-6 pieces).</li>
+        </ul>
+    </div>
+    <div class="before-bed2">
+        <div class="image-container">
+        <img src="assets/beforebed.webp" alt="Before Bed Image" loading="lazy" style="width: 400px; height: auto; margin-left: 80px; ">
+    </div></div>
+</div>
+<div class="additional-tips">
+    <h2>ADDITIONAL TIPS</h2>
+    <ul>
+        <li><strong>Spices:</strong> Indian spices like turmeric, cumin, coriander, ginger, and garlic are not only flavorful but also help in boosting metabolism.</li>
+        <li><strong>Protein:</strong> Aim for 1.6-2g of protein per kg of body weight.</li>
+        <li><strong>Carbs:</strong> Prefer complex carbs like oats, quinoa, brown rice, and millets (ragi, bajra).</li>
+        <li><strong>Healthy Fats:</strong> Include sources like almonds, walnuts, flax seeds, and olive oil in moderation.</li>
+        <li><strong>Cooking Methods:</strong> Opt for grilling, baking, steaming, and stir-frying with minimal oil.</li>
+    </ul>
+</div>
+
+
+
+
+
+
+
+
+        </div>
+    </section>
+
+   
+</div>
+    </section>
+<div id="footer-placeholder"></div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="home.js"></script>
+
+    <!-- JavaScript for Background Color Change on Scroll -->
+    <script>
+
+
+
+
+  // Function to check if an element is in the viewport
+  function isElementInViewport(el) {
+        const rect = el.getBoundingClientRect();
+        return (
+            rect.top >= 0 &&
+            rect.left >= 0 &&
+            rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+            rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+        );
+    }
+
+    // Function to handle scroll event
+    function handleScroll() {
+        const animatedElements = document.querySelectorAll('.animate');
+        animatedElements.forEach(el => {
+            if (isElementInViewport(el)) {
+                el.classList.add('animate');
+            }
+        });
+    }
+
+    // Add scroll event listener
+    window.addEventListener('scroll', handleScroll);
+
+    // Initial check
+    handleScroll();
+
+
+        
+        window.onscroll = function() {
+            var scrollTop = window.scrollY;
+            var backgroundWrapper = document.getElementById("background-wrapper");
+
+            // Change background color based on scroll position
+            if (scrollTop > 800) { // You can adjust this value
+                backgroundWrapper.style.backgroundColor = "black"; // Change to the desired color when scrolled
+            } else {
+                backgroundWrapper.style.backgroundColor = "#D9D9D9"; // Original color
+            }
+        };
+    </script>
+     <script src="footer.js"></script>
+     <script src="navbar.js"></script>
+
+</body>
+</html> 

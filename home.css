@@ -1,0 +1,1084 @@
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+body{
+    background: linear-gradient(to right, #FF5F6D, #FFC371); /* Applied gradient background */
+}
+/* General Navbar Styles */
+.navbar {
+    background-color: #fff; /* Adjust as needed */
+    border-bottom: 1px solid #ddd;
+    padding: 10px 20px; /* Adjust padding */
+}
+
+/* Flexbox container for alignment */
+.navbar-content {
+    display: flex; /* Align items horizontally */
+    align-items: center; /* Vertically center items */
+    justify-content: flex-start; /* Align items to the left */
+}
+
+/* Logo Styling */
+.logo img {
+    height: 40px; /* Adjust logo size */
+    width: auto; /* Maintain aspect ratio */
+    margin-right: 20px; /* Space between logo and links */
+}
+
+/* Navigation Links Styling */
+.navbar-links {
+    list-style: none;
+    display: flex; /* Align links horizontally */
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-links li {
+    margin-right: 20px; /* Spacing between links */
+}
+
+.navbar-links a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+/* Style for logo */
+.logo img {
+    height: 40px; /* Adjust height as needed */
+    width: auto; /* Maintain aspect ratio */
+}
+
+
+/* Mobile Drawer Styles */
+/* Hide Mobile Drawer Toggle in Desktop */
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/* Drawer Styling */
+/* Initially hide the mobile drawer */
+/* Initially hide the mobile drawer */
+.mobile-drawer {
+    display: none; /* Hidden by default */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 100%;
+    background-color: #333;
+    color: white;
+    padding-top: 60px;
+    z-index: 1000;
+    transition: transform 0.3s ease;
+    transform: translateX(-100%); /* Initially hidden off-screen */
+}
+
+/* When open, make it visible */
+.mobile-drawer.open {
+    display: block;
+    transform: translateX(0); /* Slide in from left */
+}
+
+/* Close button styling */
+.close-drawer {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+/* Mobile Drawer Links Styling */
+.mobile-drawer ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.mobile-drawer li {
+    padding: 20px;
+    border-bottom: 1px solid #444;
+}
+
+.mobile-drawer a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+/* Responsive for Mobile View */
+/* Responsive for Mobile View */
+@media (max-width: 768px) {
+    .navbar-links {
+        display: none; /* Hide the desktop nav links */
+    }
+
+    .menu-toggle {
+        display: block; /* Show the menu toggle button */
+    }
+
+    .mobile-drawer.open {
+        transform: translateX(0); /* Show the drawer when it's open */
+    }
+}
+
+/* Yellow background div under the navbar */
+.yellow-div {
+    background-color: black;
+    height: 30px; /* Height of the yellow div */
+    width: 100%;
+}
+
+/* Style for the slogan text */
+.slogan {
+    font-family: 'Inter', sans-serif;
+    font-style: italic;
+    padding: 7.5px;
+    letter-spacing: 2px;
+    font-size: 12px;
+    font-weight: bold;
+    color: white; /* Dark color for better visibility */
+    text-align: center;
+}
+
+/* Video section styling */
+.video-section {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.video-section video {
+    width: 100%;
+    height: 500px; /* Increased height */
+    object-fit: cover;
+}
+
+/* Green div below the video */
+.green-div {
+    background-color: rgb(131, 131, 131);
+    height: 500px;
+}
+
+/* Main content section */
+.main-content {
+    padding: 20px;
+}
+
+.main-content h1 {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.main-content p {
+    font-size: 1.2em;
+    color: #555;
+}
+
+/* Swiper container */
+.swiper-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden; /* Ensure no overflow outside the visible area */
+    padding: 0; /* Remove padding */
+    margin: 0; /* Ensure no margin */
+}
+
+/* Swiper Slide */
+.swiper-slide {
+    flex-shrink: 0;
+    width: 100%; /* Full width for each slide */
+    margin: 0; /* Remove margin to prevent gaps */
+}
+
+/* Cards are shown one at a time (full screen swiper) */
+.swiper-wrapper {
+    display: flex;
+    transition: transform 0.3s ease;
+    padding: 0; /* Ensure no padding */
+}
+
+/* Card Container Styling */
+.card-container {
+    position: relative;
+    overflow: hidden;
+    width: 100%; /* Full width of swiper container */
+    height: 35rem; /* Default card height */
+    border-radius: 0; /* Sharp corners */
+    margin: 0; /* No space between cards */
+}
+
+.card-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures image covers the card area */
+    transition: transform 0.3s ease-in-out;
+}
+
+.card-container:hover .card-image {
+    transform: scale(1.1); /* Zoom effect on hover */
+}
+
+/* Overlay Styling */
+.card-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 5rem; /* Overlay height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* General styling for card headings */
+.card-title {
+    text-align: left; /* Default alignment for larger screens */
+    font-size: 1.2rem;
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+/* Center the heading text on mobile screens */
+@media (max-width: 768px) {
+    .card-title {
+        text-align: center;  /* Center align text on smaller screens */
+        font-size: 1.4rem;    /* Adjust font size for mobile */
+        position: absolute;   /* Position the title absolutely */
+        top: -150px;            /* Distance from the top of the card */
+        left: 50%;            /* Position from the left */
+        transform: translateX(-50%);  /* Center horizontally */
+    }
+
+    /* Mobile-specific adjustments */
+    .swiper-slide {
+        width: 50%;  /* Show 2 cards per slide on mobile */
+    }
+
+    /* Adjust card container size for mobile */
+    .card-container {
+        height: 20rem; /* Reduced height for mobile */
+    }
+}
+
+/* Custom Navigation Container */
+.custom-navigation {
+    position: absolute;
+    top: 50%; /* Center vertically relative to the card area */
+    width: 100%; /* Full width for alignment */
+    z-index: 10;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%); /* Center buttons vertically */
+    pointer-events: none; /* Prevent blocking interactions with cards */
+}
+
+/* Custom Swiper Buttons */
+.custom-swiper-button {
+    font-size: 2rem;
+    color: black;
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 10px;
+    border-radius: 50%;
+    transition: background-color 0.3s ease;
+    pointer-events: all; /* Ensure buttons remain clickable */
+}
+
+/* Hover Effect */
+.custom-swiper-button:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+}
+
+.custom-swiper-button i {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Mobile-specific adjustments */
+@media (max-width: 768px) {
+    /* Adjust swiper slide for mobile to show two cards at a time */
+    .swiper-slide {
+        width: 100%; /* Full width for one card */
+        margin: 0; /* Removed margin to eliminate gaps */
+        overflow: hidden;
+    }
+
+    /* Adjust card container size for mobile */
+    .card-container {
+        width: 100%; /* Full width for mobile */
+        height: 20rem; /* Reduced height for mobile */
+        border-radius: 0; /* Sharp corners on mobile */
+        
+    }
+    .card-container {
+        margin-bottom: 0; /* Remove bottom margin if any */
+    }
+    
+    /* Adjust card image size for mobile */
+    .card-image {
+        height: 75%; /* Make the image fill 75% of the card height */
+    }
+
+    /* Adjust navigation button size for mobile */
+    .custom-swiper-button {
+        font-size: 1.5rem; /* Smaller size for buttons */
+        padding: 8px; /* Adjust padding */
+    }
+
+    .custom-navigation {
+        top: 50%; /* Center buttons vertically */
+    }
+}
+
+/* Full-Screen Cards Styles */
+.full-screen-swiper {
+    width: 100%;
+    height: 300px; /* Make the swiper full height */
+    background-color: #000;
+}
+
+.full-screen-card {
+    position: relative;
+    width: 100%;
+    height: 60vh; /* Make each card take full screen height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000;
+}
+
+.full-screen-card-image {
+    width: 100%;
+    height: 100%;
+    object-fit: fill; /* Ensure the image stretches and covers the full area */
+  
+}
+
+
+/* Mobile-specific adjustments for full-screen cards */
+@media (max-width: 768px) {
+    .full-screen-card {
+        height: 40vh; /* Reduced height for mobile, adjust as needed */
+    }
+
+    .full-screen-card-image {
+        object-fit: cover; /* Ensure the image covers the reduced card height */
+    }
+}
+
+.card-content {
+    position: absolute;
+    color: white;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    z-index: 10;
+}
+
+.card-content h2 {
+    margin: 0;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.5); /* Optional background for text */
+}
+
+
+/* Fitness Trainer Section */
+.fitness-trainer-section {
+    background-image: url('assets/home/portrait-handsome-man 1 (1).webp'); /* Path to your background image */
+    background-size: cover;
+    background-position: center;
+    color: white; /* Ensure text stands out */
+    text-align: center;
+    padding: 50px 20px; /* Adjust padding for spacing */
+    position: relative; /* For any positioning tweaks */
+}
+.fitness-trainer-section {
+    margin-top: 0; /* Remove margin at the top of the section */
+    padding-top: 0; /* Adjust padding if needed */
+}
+
+/* Overlay for better text visibility */
+.fitness-trainer-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
+    z-index: 0; /* Ensure it sits below content */
+}
+
+/* Content inside the section */
+.fitness-trainer-section .content {
+    position: relative; /* To position above the overlay */
+    z-index: 1;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Heading styles */
+.fitness-trainer-section h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* Sub-heading styles */
+.fitness-trainer-section .sub-heading {
+    font-size: 1.5rem;
+    font-style: italic;
+    margin-bottom: 10px;
+}
+
+/* Highlight text styles */
+.fitness-trainer-section .highlight {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 30px;
+    color: #FFD700; /* Gold color for emphasis */
+}
+
+/* Call-to-action button */
+.fitness-trainer-section .cta-button {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: black;
+    background: linear-gradient(to right, #FF5F6D, #FFC371); /* Applied gradient background */
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.fitness-trainer-section .cta-button:hover {
+    background: linear-gradient(to right, #FF5F6D, #FFC371); /* Applied gradient background */
+}
+
+.card-link {
+    text-decoration: none;
+    color: inherit;
+    display: block; /* Ensures the link covers the entire card */
+}
+
+
+/* Featured Services Section */
+.featured-services {
+    background: linear-gradient(to right, #FF5F6D, #FFC371); /* Applied gradient background */
+}
+.featured-services .section-title {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+.featured-services .service-card {
+    padding: 20px;
+    margin: 10px;
+    background: linear-gradient(to right, #FF5F6D, #FFC371); /* Applied gradient background */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.featured-services .service-icon {
+    font-size: 3rem;
+    color: #ff9900;
+    margin-bottom: 15px;
+}
+.featured-services .service-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+.featured-services .service-description {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+/* Testimonials Section */
+.testimonials {
+    padding: 50px 0;
+}
+.testimonials .section-title {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+.testimonials .testimonial-card {
+    background: linear-gradient(to right, #FF5F6D, #FFC371); /* Applied gradient background */
+    padding: 20px;
+    margin: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.testimonials .testimonial-text {
+    font-style: italic;
+    color: #333;
+    margin-bottom: 10px;
+}
+.testimonials .testimonial-author {
+    font-weight: bold;
+    color: #555;
+}
+
+/* What is Bearitt Section */
+/* What is Bearitt Section */
+.section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 0;
+    background: linear-gradient(to right, #FF5F6D, #FFC371);
+    padding: 60px 30px;
+    position: relative;
+    width: 100%; /* Ensure section takes up full width */
+    box-sizing: border-box;
+    overflow: hidden; /* Prevent any content from overflowing */
+}
+
+.content-wrapper {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px; /* Max width for large screens */
+    padding: 0 20px; /* Ensure space around content */
+    box-sizing: border-box;
+}
+
+.animated-section {
+    width: 50%;
+    color: #fff;
+    opacity: 0;
+    transform: translateY(30px) scale(0.95);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.animated-section.visible {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+}
+
+.animated-section h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #fff;
+    text-align: left; /* Ensure text is left-aligned */
+}
+
+.animated-section p {
+    font-size: 1.2rem;
+    font-weight: 500;
+    line-height: 1.6;
+    color: #fff;
+    text-align: left; /* Ensure text is left-aligned */
+}
+
+.animated-section ul {
+    list-style: none;
+    margin-top: 20px;
+    padding: 0;
+    text-align: left; /* Ensure text is left-aligned */
+}
+
+.animated-section ul li {
+    font-size: 1.1rem;
+    font-weight: 400;
+    padding-left: 15px;
+    position: relative;
+    margin-bottom: 12px;
+    color: #fff;
+}
+
+.animated-section ul li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    font-size: 1.2rem;
+    color: #FFD700;
+    top: 0;
+}
+
+.video-container {
+    width: 45%;
+    max-width: 600px;
+    animation: fadeIn 1.5s ease-out;
+}
+
+video {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+    /* Mobile-specific adjustments */
+    .content-wrapper {
+        display: flex;
+        flex-direction: column; /* Stack elements vertically */
+        align-items: center;
+    }
+
+    .video-container {
+        width: 100%; /* Full width for the video */
+        padding: 0;
+        margin-top: 20px; /* Add space between text and video */
+    }
+
+    /* Ensure section content is full width */
+    .animated-section {
+        width: 100%; /* Full width */
+        padding: 0 10px; /* Padding around text */
+    }
+
+    /* Additional adjustments for body text */
+    .animated-section p,
+    .animated-section ul li {
+        font-size: 1.2rem; /* Increased font size for better readability */
+    }
+
+    .animated-section h1 {
+        font-size: 2.5rem; /* Larger heading font size for mobile */
+        overflow: hidden; /* Prevent overflow */
+        text-overflow: ellipsis; /* Add ellipsis for overflow text */
+    }
+}
+
+
+/* Animation for Smooth Fade In */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.animated-section {
+    width: 50%;
+    color: #fff;
+    opacity: 0;
+    transform: translateY(30px) scale(0.95);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.animated-section.visible {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+}
+
+/* Fitness Trainer Section */
+/* Trainer Section Styling */
+.trainer-section {
+    background: linear-gradient(to right, #FF5F6D, #FFC371); /* Applied gradient background */
+    padding: 60px 30px;
+    text-align: center;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #fb0000;
+    margin-bottom: 40px;
+    letter-spacing: 1px;
+}
+
+.trainer-options {
+    display: flex;
+    justify-content: space-between; /* This ensures side-by-side alignment in desktop */
+    gap: 30px; /* Adds spacing between the options */
+    margin-bottom: 40px;
+    flex-wrap: wrap; /* Ensures the options wrap on smaller screens */
+}
+
+.trainer-option {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    width: 48%; /* Ensure items are side by side by taking up less than 50% of the width */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.trainer-option:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+}
+
+.trainer-option h3 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #e74c3c;
+    margin-bottom: 20px;
+}
+
+.trainer-option p {
+    font-size: 1.2rem;
+    color: #7f8c8d;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.trainer-option ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 30px;
+}
+
+.trainer-option ul li {
+    font-size: 1.1rem;
+    color: #34495e;
+    margin-bottom: 10px;
+    padding-left: 20px;
+    position: relative;
+}
+
+.trainer-option ul li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    font-size: 1.2rem;
+    color: #2ecc71;
+    top: 0;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 12px 25px;
+    background-color: #e74c3c;
+    color: #fff;
+    font-weight: 600;
+    font-size: 1rem;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #c0392b;
+}
+
+/* Mobile responsive styles */
+@media (max-width: 768px) {
+    .trainer-options {
+        flex-direction: column; /* Stack items vertically on small screens */
+        align-items: center; /* Center items in mobile mode */
+        margin-top: 0; /* Remove top margin from the container */
+        padding-top: 0; /* Remove top padding if any */
+    }
+
+    .trainer-option {
+        width: 90%; /* Make each item take up most of the screen width */
+        margin-bottom: 20px; /* Add spacing between the stacked items */
+        margin-top: 0; /* Remove top margin between individual items */
+    }
+}
+
+/* Featured Services Section */
+.featured-services {
+    background-color: #f9f9f9;
+    padding: 40px 0;
+}
+
+.featured-services .section-title {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    text-align: center;
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+.featured-services .service-card {
+    padding: 20px;
+    margin: 10px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animation added */
+}
+
+.featured-services .service-card:hover {
+    transform: scale(1.05); /* Zoom effect */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Elevation effect */
+}
+
+.featured-services .service-icon {
+    font-size: 3rem;
+    color: #ff9900;
+    margin-bottom: 15px;
+}
+
+.featured-services .service-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.featured-services .service-description {
+    font-size: 0.9rem;
+    color: #666;
+    line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+    .featured-services .service-card {
+        margin: 10px auto;
+        width: 90%; /* Full width on mobile */
+    }
+
+    .featured-services .section-title {
+        font-size: 1.5rem;
+    }
+}
+
+
+/* Testimonials Section */
+.testimonials {
+    padding: 50px 0;
+}
+.testimonials .section-title {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+.testimonials .testimonial-card {
+    background: #fff;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.testimonials .testimonial-text {
+    font-style: italic;
+    color: #333;
+    margin-bottom: 10px;
+}
+.testimonials .testimonial-author {
+    font-weight: bold;
+    color: #555;
+}
+
+/* Community Section Styling */
+.community-section {
+    padding: 30px 15px;
+    background: linear-gradient(to right, #FF5F6D, #FFC371); /* Applied gradient background */
+    text-align: center;
+}
+
+.community-container {
+    display: flex;
+    flex-direction: column; /* Mobile-first layout */
+    align-items: center;
+    gap: 20px;
+}
+
+.community-content h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.community-content p {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.community-benefits {
+    list-style-type: none; /* Remove default list styling */
+    padding: 0;
+    margin: 0;
+    background-color: #ff5722; /* Set background to your theme color */
+    text-align: left; /* Align benefits text to the left */
+    line-height: 1.8; /* Increase line spacing for better readability */
+    gap: 15px; /* Add space between items */
+    display: flex;
+    flex-direction: column; /* Ensure vertical alignment */
+}
+
+.community-benefits li {
+    font-size: 16px;
+    color: #444;
+    padding: 8px 0; /* Add padding around each item */
+    border-bottom: 1px solid #ddd; /* Add subtle separators */
+}
+
+.community-benefits li:last-child {
+    border-bottom: none; /* Remove bottom border for the last item */
+}
+
+.community-benefits li strong {
+    margin-right: 8px;
+    color: #000; /* Bold and emphasize key parts */
+}
+.community-benefits li:hover {
+    background-color: #f0f8ff; /* Light background highlight on hover */
+    border-radius: 5px; /* Slightly round the edges */
+    padding-left: 10px; /* Add slight movement to emphasize hover */
+    transition: 0.3s ease; /* Smooth hover transition */
+}
+
+
+
+
+.community-image img {
+    width: 100%;
+    border-radius: 10px;
+    max-width: 400px; /* Limit image size */
+}
+
+.join-now-btn {
+    background-color: #c7c7c7;
+    color: #000000;
+    padding: 12px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+}
+
+.join-now-btn:hover {
+   
+    background-color: #ffffff;
+}
+
+/* Responsive Design */
+@media (min-width: 768px) {
+    .community-container {
+        flex-direction: row; /* Side-by-side layout on larger screens */
+        justify-content: space-between;
+    }
+
+    .community-content {
+        flex: 1;
+        text-align: left;
+        padding-right: 20px;
+    }
+
+    .community-image {
+        flex: 1;
+    }
+}
+/* Our Tools Section */
+.our-tools {
+    background-color: #000; /* Black background */
+    color: #fff; /* White text for contrast */
+    padding: 50px 0;
+    text-align: center;
+}
+
+.our-tools .section-title {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+.our-tools .section-description {
+    font-size: 1rem;
+    color: #ccc;
+    margin-bottom: 30px;
+}
+
+.our-tools .tool-cards {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.our-tools .tool-card {
+    background: linear-gradient(145deg, #1e1e1e, #2b2b2b); /* Subtle gradient */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    padding: 20px;
+    width: 28%; /* Adjust width for spacing */
+    margin: 15px 0;
+    text-align: left; /* Align text left inside cards */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Hover animation */
+}
+
+.our-tools .tool-card:hover {
+    transform: translateY(-10px); /* Lift effect */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); /* Deeper shadow */
+}
+
+.our-tools .tool-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #ff9900; /* Highlighted title color */
+}
+
+.our-tools .tool-description {
+    font-size: 0.9rem;
+    color: #ddd;
+    line-height: 1.5;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .our-tools .tool-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .our-tools .tool-card {
+        width: 90%; /* Full width on mobile */
+    }
+}
+
+.app-section {
+    background-color: #000; /* Your theme color */
+    color: #fff;
+    padding: 50px 20px;
+}
+
+.section-title {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.app-description {
+    font-size: 1rem;
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+.app-coming-soon p {
+    font-size: 1.2rem;
+    color: #ff9900; /* Accent color for emphasis */
+    margin-bottom: 20px;
+}
+
+.app-preview-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Mobile devices */
+@media screen and (max-width: 768px) {
+    .animated-section{
+        width: 100%;
+    }
+}

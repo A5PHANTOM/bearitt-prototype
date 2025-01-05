@@ -1,0 +1,112 @@
+/* Apply Zen Dot to body text */
+body {
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+/* Apply Zen Dot to other specific elements (e.g., headers) */
+h1, h2, h3, p {
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+/* Ensure buttons and links also use Zen Dot font */
+.nav-link, .card-title, .btn {
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+.hero {
+  background-image: url('assets/bulkdemo\ 1\ \(2\).webp');
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  padding: 100px 20px;
+}
+
+.text-success {
+  color: orange !important;
+}
+
+.jumbotron {
+  background-image: url('assets/Group\ 7.webp'); /* Replace with the path to your image */
+    background-size: cover;  /* Ensures the image covers the full section */
+    background-position: center; /* Centers the image */
+    background-position: 50% 100%; 
+    color: #fff;  /* White text color for contrast */
+    padding: 100px 20px;  /* Adjust padding for desired spacing */
+    text-align: center; /* Center-align the text */
+}
+
+footer {
+  background-color: #333;
+  color: #fff;
+}
+
+
+/* Set a fixed height for the cards */
+.card {
+  height: 400px; /* Adjust the height as needed */
+  display: flex;
+  flex-direction: column;
+}
+
+.card-body {
+  flex-grow: 1; /* Ensures content stretches to fill the remaining space */
+}
+
+.card-title {
+  font-size: 1.25rem; /* Optional: Adjust title size */
+  margin-bottom: 15px; /* Adds space between title and text */
+}
+
+.card-text {
+  flex-grow: 1; /* Makes sure text content stretches to fill the card body */
+}
+
+/* Ensure the image fits properly inside the card */
+.card-img-top {
+  width: 100%;
+  height: 200px; /* Adjust the height as needed */
+  object-fit: cover; /* Ensures the image covers the area without distortion */
+}
+
+/* Mobile-friendly adjustments */
+@media (max-width: 768px) {
+  /* Navbar adjustments */
+  .navbar-brand {
+      font-size: 1.5rem;
+  }
+
+  .navbar-nav .nav-link {
+      font-size: 1rem;
+      padding: 8px 5px;
+  }
+
+  /* Jumbotron text */
+  .jumbotron h1 {
+      font-size: 1.8rem;
+  }
+  
+  .jumbotron p {
+      font-size: 1rem;
+  }
+
+  /* Cards layout */
+  .meal-plans .card, .recipes .card {
+      margin: 10px 0;
+  }
+
+  /* Responsive card titles and text */
+  .card-title {
+      font-size: 1.2rem;
+  }
+
+  .card-text {
+      font-size: 0.9rem;
+  }
+
+  /* Tips Section */
+  .tips ul.list-group {
+      font-size: 0.9rem;
+  }
+
+
+}

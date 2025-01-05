@@ -1,0 +1,227 @@
+/* General Styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: #333;
+    line-height: 1.6;
+}
+
+h1, h2, h3 {
+    margin: 0;
+    font-weight: bold;
+}
+
+button {
+    background-color: #E12C2C;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #C62424;
+}
+
+.highlight {
+    color: #E12C2C;
+}
+
+/* Hero Section */
+.hero {
+    background: url('main.webp') no-repeat center center/cover;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-logo {
+    position: absolute; /* Position it relative to the hero section */
+    margin-top: -10px; /* Adjust top margin to position */
+    right: 20px; /* Adjust left margin to position */
+    width: 150px; /* Set the width of the logo */
+    height: auto; /* Maintain aspect ratio */
+    z-index: 3; /* Ensure it appears above the overlay */
+}
+
+.hero-overlay {
+    background: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.hero-content {
+    color: #fff;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+}
+
+.hero-content h1 {
+    font-size: 5rem;
+    font-style: italic;
+    margin-top: 240px;
+}
+
+.hero-content p {
+    font-size: 1.6rem;
+    margin-top: -10px;
+    font-style: italic;
+    line-height: 1.4;
+}
+
+/* Coaching Section */
+.coaching-section {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    flex-wrap: wrap;
+    padding: 20px;
+    gap: 20px;
+}
+
+.coaching-card {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 300px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.coaching-card:hover {
+    transform: translateY(-5px);
+}
+
+.coaching-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px 8px 0 0;
+}
+
+.coaching-card h3 {
+    margin: 15px 0 10px;
+    font-size: 1.2rem;
+    color: #333;
+}
+
+.coaching-card p {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+/* Call to Action Section */
+.cta-section {
+    background-color: #ffffff;
+    padding: 30px 20px;
+    text-align: center;
+    margin-left: 300px;
+    margin-right: 300px;
+    margin-top: 100px;
+
+}
+
+.cta-section h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.cta-section p {
+    margin-bottom: 10px;
+    color: #555;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.cta-section ul {
+    list-style: none;
+    padding: 8;
+    margin-left: 50px;
+    margin-right: 50px;
+
+}
+
+.cta-section li {
+    margin: 10px 0;
+    font-size: 1rem;
+}
+
+
+/* Card Scale Effect */
+.coaching-card {
+    transition: transform 0.3s ease-in-out; /* Smooth scaling animation */
+}
+
+.coaching-card.enlarge {
+    transform: scale(1.1); /* Enlarge card to 110% size */
+}
+
+
+
+
+footer {
+    background-color: #111;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+.footer-column {
+    width: 23%; /* Adjust the width of each column */
+    margin-bottom: 30px;
+}
+
+.footer-column h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+ul {
+    list-style: none;
+}
+
+ul li a {
+    color: #fff;
+    text-decoration: none;
+    margin-bottom: 8px;
+    display: block;
+}
+
+ul li a:hover {
+    color: #f39c12;
+}
+
+.footer-bottom {
+    margin-top: 20px;
+    font-size: 0.9rem;
+    color: #777;
+}
+
+/* For responsiveness, adjust the columns on smaller screens */
+@media (max-width: 768px) {
+    .footer-column {
+        width: 48%; /* Make each column take 48% on smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .footer-column {
+        width: 100%; /* Stack columns on very small screens */
+    }
+}

@@ -1,0 +1,200 @@
+body {
+    background-image: url('assets/contact.webp');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: #fff; /* Adjust text color for better contrast */
+}
+
+.container {
+    max-width: 600px;
+    margin: auto;
+}
+
+h1 {
+    font-size: 2.5rem;
+}
+
+.contact-info {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    color: white;
+}
+
+.contact-methods p {
+    font-size: 1.1rem;
+    color: white;
+    text-align: center;
+}
+
+.contact-methods span {
+    color: white;
+    font-weight: bold;
+}
+
+
+.navbar {
+    background-color: white;
+    padding: 10px 20px;
+    border-bottom: 1px solid #ddd;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    overflow: hidden; /* Prevents overflow */
+}
+
+/* Flexbox Layout for Navbar Content */
+.navbar-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Space between logo and menu */
+}
+
+/* Logo Styling */
+.logo {
+    height: 50px;
+    margin-right: 20px;
+}
+
+/* Navigation Links */
+.navbar ul {
+    list-style-type: none;
+    display: flex;
+    gap: 15px; /* Space between links */
+    margin: 0;
+    padding: 0;
+}
+
+.navbar li {
+    margin: 0;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    padding: 5px 10px;
+    white-space: nowrap; /* Prevents link text from wrapping */
+}
+
+.navbar a:hover {
+    color: #007bff;
+}
+
+/* Mobile-Friendly Adjustments */
+@media (max-width: 768px) {
+    /* Reduce the padding and font size for mobile */
+    .navbar {
+        padding: 10px 10px;
+    }
+
+    .navbar ul {
+        display: flex; /* Keep the navigation items in a row */
+        gap: 10px; /* Reduced gap between items */
+    }
+
+    .navbar a {
+        font-size: 14px; /* Smaller font size for mobile */
+        padding: 5px 8px; /* Reduced padding */
+    }
+    
+    .logo {
+        height: 40px; /* Adjust logo size for mobile */
+    }
+}
+
+
+.contact-title {
+    display: block;             /* Makes it a block element */
+    text-align: center;         /* Centers the text within the block */
+    font-size: 4em;             /* Adjust the font size as desired */
+    font-weight: bolder;          /* Make it bold for emphasis */
+    color: white;             /* Set a custom color (optional) */
+    margin: 20px 0;             /* Add space around the title */
+}
+
+/* Full-width Grey Background Section */
+.grey-background {
+    background-color:transparent; /* Background color for the container */
+    padding: 20px; /* Space inside the container */
+    max-height: 500px; /* Set a maximum height to lower the container */
+    margin-top: auto; /* Push it down within the parent layout */
+    margin-bottom: 0; /* Ensure no additional spacing at the bottom */
+    display: flex; /* Flexbox for alignment */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+
+
+/* Style for the image */
+.apk-demo-image {
+    max-width: 400px; /* Set a reasonable size for the image */
+    height: auto;
+    margin: 0;
+    z-index: 1;
+}
+
+
+
+
+/* Announcement text styling */
+.announcement-text {
+    font-size: 4rem; /* Increase font size */
+    font-weight: bold;
+    color: white; /* Set color to black */
+    position: absolute; /* Position it at the top left */
+    top: 20px;
+    left: 20px; /* Move the text to the left */
+    z-index: 2; /* Ensure text is on top of the image */
+}
+
+/* Text Alignment to Right Top */
+.grey-background p {
+    position: absolute; /* Position text absolutely within the grey background */
+    top: 20px; /* Adjust to place text at the top */
+    right: 20px; /* Adjust to place text at the right */
+    font-size: 3.2em;
+    color: white;
+    z-index: 2; /* Ensure text appears above the image */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 3rem;
+    }
+
+    .grey-background {
+        flex-direction: column; /* Stack elements on mobile */
+        align-items: center; /* Center-align the content */
+        padding: 15px;
+    }
+
+    .apk-demo-image {
+        max-width: 200px; /* Smaller image for mobile */
+        margin-top: 20px; /* Add some space above the image */
+    }
+
+    .grey-background p {
+        position: static; /* Reset position for mobile view */
+        text-align: center; /* Center the text on smaller screens */
+        font-size: 1.1em;
+    }
+}
+
+.social-icons {
+
+    align-items: center;
+    display: flex; /* Use flexbox for social icons */
+    gap: 30px; /* Space between icons */
+    
+    margin-top: 10px; /* Space above social icons */
+}
+
+.social-icons a {
+    color: white; /* Color for social icons */
+    font-size: 1.5em; /* Size of social icons */
+}

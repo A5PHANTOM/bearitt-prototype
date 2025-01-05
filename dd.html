@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bearitt Animation Fix</title>
+    <!-- Include Animate.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f3f3f3;
+        }
+
+        .section {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .animated-section {
+            background: linear-gradient(to right, #ff9900, #000000);
+            color: white;
+            padding: 50px;
+            text-align: center;
+            width: 90%;
+            max-width: 800px;
+            border-radius: 10px;
+            opacity: 0; /* Hidden initially */
+            transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+            transform: translateY(50px); /* Initial animation state */
+        }
+
+        .visible {
+            opacity: 1; /* Fade in when visible */
+            transform: translateY(0); /* Reset transform when visible */
+        }
+
+        .video-container {
+            max-width: 300px;
+            width: 100%;
+            height: auto;
+            margin: 20px auto;
+        }
+
+        .video-container video {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        .content-wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        @media (min-width: 768px) {
+            .content-wrapper {
+                flex-direction: row;
+                gap: 20px;
+            }
+
+            .animated-section {
+                flex: 1;
+            }
+
+            .video-container {
+                flex: 0.5;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="section">
+        <div class="content-wrapper">
+            <div class="animated-section" id="animatedSection">
+                <h1 class="animate__animated animate__fadeInLeft">What is Bearitt?</h1>
+                <p class="animate__animated animate__fadeInRight">
+                    Bearitt is more than just a fitness platform; it's a movement! We aim to empower individuals to achieve their fitness goals through personalized plans, expert guidance, and a supportive community.
+                </p>
+                <ul class="animate__animated animate__fadeInUp">
+                    <li>Provide tailored fitness and nutrition plans for everyone.</li>
+                    <li>Build a supportive fitness community to stay motivated.</li>
+                    <li>Promote healthy lifestyles and long-term fitness journeys.</li>
+                    <li>Empower fitness trainers to reach a wider audience.</li>
+                </ul>
+            </div>
+            <div class="video-container">
+                <video autoplay muted loop>
+                    <source src="assets/intro.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Ensure animations reset and apply scroll logic after DOM loads
+        document.addEventListener("DOMContentLoaded", function () {
+            const section = document.getElementById("animatedSection");
+
+            // Scroll detection for animation
+            const handleScroll = () => {
+                const sectionTop = section.getBoundingClientRect().top;
+                const viewportHeight = window.innerHeight;
+
+                if (sectionTop < viewportHeight - 100) { // Trigger before fully in view
+                    section.classList.add("visible");
+                }
+            };
+
+            // Reset animations initially
+            section.classList.remove("visible");
+
+            // Attach scroll listener
+            window.addEventListener("scroll", handleScroll);
+
+            // Run scroll logic on initial load
+            handleScroll();
+        });
+    </script>
+</body>
+</html>

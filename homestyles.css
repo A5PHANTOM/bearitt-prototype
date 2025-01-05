@@ -1,0 +1,176 @@
+/* Global Styles */
+body {
+    margin: 0;
+    background-color: #ece9e8;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Navbar styles */
+.navbar-nav .nav-link {
+    font-family: 'Zen Dots', sans-serif; /* Set Zen Dots font */
+    color: black; /* Color for navbar items */
+}
+
+.navbar .navbar-logo {
+    width: 100px; /* Adjust size as needed */
+    height: auto;
+    position: absolute;
+    right: 20px; /* Distance from the right edge */
+    top: 10px; /* Distance from the top edge */
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    position: relative;
+    z-index: 1;
+}
+
+.menu-icon {
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.logo {
+    width: 50px;
+    height: auto;
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    z-index: 1;
+}
+
+/* Video Section Styles */
+.video-section {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    z-index: -1;
+}
+
+.intro-video {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.content-area {
+    padding: 20px;
+    text-align: center;
+    color: black;
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+
+/* Mobile-specific adjustments */
+@media (max-width: 768px) {
+    .video-section {
+        height: 50vh; /* Video takes half of the screen height */
+    }
+
+    .content-area {
+        position: relative;
+        top: 100%; /* Moves content below the video */
+        transform: none; /* Reset transformation for proper layout */
+        background-color: white;
+        padding: 40px 20px;
+        width: 100%; /* Full width on mobile */
+        text-align: left; /* Align text to the left */
+        margin: 0; /* Remove any default margin */
+        left: 0%;
+    }
+
+    /* Adjust the video for mobile */
+    .intro-video {
+        height: auto; /* Ensure it scales correctly */
+    }
+
+    /* Adjust content position and font size on mobile */
+    .content-area {
+        top: 60%; /* Adjust content position on mobile */
+        font-size: 1.2em; /* Increase text size slightly */
+    }
+
+    .video-section {
+        height: auto;
+    }
+}
+
+/* Drawer Styles (for mobile navigation) */
+.drawer {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    left: 0;
+    background-color: black;
+    color: #ece9e8;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.drawer a {
+    padding: 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: white;
+    display: block;
+    transition: 0.3s;
+}
+
+.drawer a:hover {
+    color: #f44336;
+}
+
+.close-btn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+/* CTA Button Styles */
+.cta-button {
+    padding: 10px 20px;
+    background-color: orange;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.cta-button:hover {
+    background-color: #ff9900;
+}
+
+/* Mobile-specific adjustments for CTA and Drawer */
+@media (max-width: 768px) {
+    .intro-video {
+        height: auto; /* Ensure it scales correctly on mobile */
+    }
+
+    .content-area {
+        top: 60%; /* Adjust content position on mobile */
+        font-size: 1.2em; /* Increase text size slightly */
+    }
+
+    .drawer {
+        width: 250px; /* Expand drawer width */
+    }
+
+    .drawer a {
+        font-size: 20px; /* Smaller font size for mobile */
+    }
+
+    .cta-button {
+        font-size: 1.2em; /* Larger CTA button on mobile */
+    }
+}

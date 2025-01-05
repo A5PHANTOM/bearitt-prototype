@@ -1,0 +1,638 @@
+/* General Styles */
+body {
+    font-family: 'Space Grotesk', sans-serif;
+    min-width: 1200px;
+    max-width: 100%;
+    overflow-x: hidden; /* Prevents horizontal scrolling */
+}
+
+/* Style for the navigation bar */
+/* General Styles for the Navigation Bar */
+.navbar {
+    background-color: white;
+    padding: 10px 20px;
+    border-bottom: 1px solid #ddd;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    overflow: hidden; /* Prevents overflow */
+}
+
+/* Flexbox Layout for Navbar Content */
+.navbar-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Space between logo and menu */
+}
+
+/* Logo Styling */
+.logo {
+    height: 50px;
+    margin-right: 20px;
+}
+
+/* Navigation Links */
+.navbar ul {
+    list-style-type: none;
+    display: flex;
+    gap: 15px; /* Space between links */
+    margin: 0;
+    padding: 0;
+}
+
+.navbar li {
+    margin: 0;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    padding: 5px 10px;
+    white-space: nowrap; /* Prevents link text from wrapping */
+}
+
+.navbar a:hover {
+    color: #007bff;
+}
+
+/* Mobile-Friendly Adjustments */
+@media (max-width: 768px) {
+    /* Reduce the padding and font size for mobile */
+    .navbar {
+        padding: 10px 10px;
+    }
+
+    .navbar ul {
+        display: flex; /* Keep the navigation items in a row */
+        gap: 10px; /* Reduced gap between items */
+    }
+
+    .navbar a {
+        font-size: 14px; /* Smaller font size for mobile */
+        padding: 5px 8px; /* Reduced padding */
+    }
+    
+    .logo {
+        height: 40px; /* Adjust logo size for mobile */
+    }
+}
+
+
+
+h1 {
+    color: yellow;
+}
+h2, h3, h4 {
+    color: black;
+}
+
+.cut-subheading {
+    font-size: 26px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.cut-heading {
+    font-size: 30px;
+    text-align: center;
+    padding: 15px;
+}
+
+.cut-bg-image {
+    max-width: 100%;
+    height: 100px;
+    display: block;
+    margin: 0 auto;
+}
+
+.cut-principles {
+    padding: 20px;
+}
+
+.cut-list {
+    font-size: 18px;
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+.cut-list li {
+    margin-bottom: 8px;
+}
+
+
+
+/* Suggested Recipes */
+.recipes {
+    margin-top: 20px;
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    font-size: 9px;
+}
+
+.recipes ul {
+    padding: 0;
+    list-style-type: none;
+    margin: 0;
+}
+
+.recipes li {
+    margin-bottom: 10px;
+    text-align: left;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+
+
+.cut-background {
+    background-image: url('assets/g2OKwZ.webp');
+    background-size: cover;
+    background-position: top center;
+    background-repeat: no-repeat;
+    padding: 10px 20px; /* Reduced padding */
+   height: 100px;
+    color: white;
+}
+
+
+.cut-description {
+    text-align: left;
+    font-size: 15px;
+    margin: 400px auto 0;
+    padding: 20px;
+    width: 100%;
+    opacity: 0; /* Fully transparent initially */
+    transform: scale(0.9); /* Slightly smaller */
+    transition: transform 0.5s ease, opacity 0.5s ease; /* Smooth transition */
+}
+
+/* Hover State */
+.cut-description:hover {
+    opacity: 1; /* Fully opaque */
+    transform: scale(1.05); /* Slightly larger */
+}
+
+/* Add this class to trigger fade-in */
+.fade-in {
+    opacity: 1; /* Fully opaque */
+    transform: scale(1); /* Normal size */
+    transition: transform 0.5s ease, opacity 0.5s ease; /* Smooth transition */
+}
+
+/* Animation for fade-in and scale-up */
+@keyframes fadeInScaleUp {
+    0% {
+        transform: scale(0.5);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Class for adding the animation */
+.animate {
+    animation: fadeInScaleUp 0.5s ease forwards;
+}
+
+/* Add hover effect for elements */
+.hover-scale {
+    transition: transform 0.3s ease;
+}
+
+.hover-scale:hover {
+    transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+.cutprninc-text {
+    text-align: center;
+    margin: 0 20px;
+    color: black;
+    font-size: 30px;
+}
+
+.animated-text {
+    margin-top: 60px;
+    font-size: 20px;
+    color: grey;
+    transition: color 0.5s ease;
+}
+
+.animated-text:hover {
+    color: rgb(10, 9, 9);
+}
+
+.nav-link {
+    color: yellow;
+}
+
+.nav-link:hover {
+    text-decoration: underline;
+}
+
+/* Breakfast Section */
+/* Breakfast Container */
+.breakfast-container {
+    display: flex;
+    justify-content: space-between; /* Adjusts spacing between breakfast items */
+    margin-top: 20px; /* Spacing above the breakfast section */
+}
+
+.breakfast1 {
+    flex: 1; /* Allows the text section to take available space */
+    text-align: left; /* Align text to the left */
+    font-size: 20px; /* Match the font size with lunch and dinner */
+}
+
+.breakfast2 {
+    flex: 1; /* Allows the image section to take available space */
+    text-align: left; /* Align text to the left */
+}
+
+.breakfast1 h4 {
+    margin-top: 0; /* Adjust margin for headings */
+}
+
+/* Responsive Styles for Mobile */
+@media (max-width: 768px) {
+    .breakfast-container {
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center the content */
+        text-align: center; /* Center-align text */
+        overflow: hidden;
+
+    }
+
+    .breakfast1, .breakfast2 {
+        width: 100%; /* Full width for each item */
+        overflow: hidden;
+
+    }
+    
+    
+}
+
+/* Breakfast Image Styles */
+.breakfast2 img {
+    max-width: 100%; /* Responsive image size */
+    height: auto; /* Maintain aspect ratio */
+}
+
+/* Lunch Container */
+.lunch-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.lunch1, .lunch2 {
+    flex: 1;
+}
+
+.lunch1 {
+    
+    text-align: left;
+}
+
+
+.lunch2 {
+    text-align: left;
+    padding-left: 20px; /* Optional, for some spacing */
+}
+
+/* Mobile adjustments for lunch layout */
+@media (max-width: 768px) {
+    .lunch-container {
+        flex-direction: column; /* Stack elements vertically */
+        text-align: left; /* Center-align text */
+        overflow: hidden;
+    }
+
+     .lunch2 {
+        width: 100%; /* Full width for each section */
+        margin-bottom: 15px; /* Add spacing between sections */
+    }
+    .lunch1{
+        width: 120%;
+        overflow:hidden;
+    }
+    
+    .lunch2 {
+        order: 1; /* lunch2 first */
+    }
+
+    .lunch1 {
+        order: 2; /* lunch1 second */
+    }
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    /* Mobile-specific adjustments */
+    body {
+        min-width: 100%;
+    }
+
+    h1, h2, h3, h4, .cut-heading, .cut-subheading {
+        font-size: 20px; /* Adjust header sizes */
+    }
+
+    .cut-description, .breakfast-content, .recipes {
+        font-size: 10px;
+        text-align: center;
+        padding: 10px;
+    }
+
+    .cut-list, .recipes ul {
+        font-size: 15px;
+        padding-left: 20px;
+    }
+
+    .breakfast-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .breakfast-image {
+        max-width: 100%;
+        height: auto;
+    }
+
+    
+}
+
+/* Dinner Container */
+.dinner-container {
+    display: flex;
+    justify-content: space-between; /* Adjusts spacing between dinner items */
+    margin-top: 20px; /* Spacing above the dinner section */
+}
+
+.dinner1 {
+    flex: 1; /* Allows the text section to take available space */
+}
+
+.dinner2 {
+    flex: 1; /* Allows the image section to take available space */
+}
+
+@media (max-width: 768px) {
+    /* Existing mobile adjustments */
+    .dinner-container {
+        flex-direction: column;
+        align-items: center; /* Centers the content */
+        text-align: center; /* Align text to the center */
+        overflow: hidden;
+    }
+
+    .dinner1 {
+        width: 100%; /* Full width for each item */
+    }
+
+    .dinner2 {
+        flex: 1;
+        max-width: 50%; /* Adjust width as needed */
+        margin-right: 280px;
+    }
+}
+
+/* New styles for snack1 and snack2 */
+.snack-container {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+    margin: 20px 0;
+    overflow: hidden;
+}
+
+.snack1 {
+    flex: 1;
+    text-align: left; /* Image on the left */
+}
+
+.snack2 {
+    flex: 1;
+    text-align: left; /* Text on the right */
+}
+
+.snack2 h4 {
+    margin-top: 0;
+}
+
+.lsnack1, .snack2 {
+    width: 50%;
+}
+
+@media (max-width: 768px) {
+    /* Existing mobile adjustments */
+    .snack-container {
+        flex-direction: column;
+        align-items: left; /* Centers the content */
+        text-align: left; /* Center-align text */
+    }
+
+    .snack1 {
+        order: 2;
+        width: 100%; /* Full width for each item */
+        text-align: left; /* Center-align individual text */
+    }
+    .snack2 {
+        width: 100%;
+        order: 1; /* Show snack2 first in mobile mode */
+        text-align: left; /* Center-align individual text */
+        margin-bottom: 20px; /* Add spacing */
+    }
+}
+
+/* Before Bed Section */
+.before-bed-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+
+.before-bed1, .before-bed2 {
+    flex: 1;
+    text-align: left; /* Align text to the left */
+}
+
+.before-bed1 h4 {
+    margin-top: 0; /* Adjust margin for headings */
+}
+
+/* Responsive Styles for Mobile */
+@media (max-width: 768px) {
+    .before-bed-container {
+        flex-direction: column; /* Stack items vertically */
+        align-items: left; /* Center the content */
+        text-align: right/* Center-align text */
+    }
+
+    .before-bed1 {
+        width: 100%; /* Full width for each item */
+    }
+     .before-bed2 {
+        width: 40%;
+        align-items:center;
+        align-self: start;
+         /* Adjust this value to move it left */
+     }
+}
+
+/* Additional Tips Section */
+.additional-tips {
+    margin-top: 20px;
+    padding: 10px;
+    text-align: center; /* Align text to the left */
+}
+
+.additional-tips h4 {
+    font-size: 18px; /* Adjust heading size */
+}
+
+.additional-tips ul {
+    list-style-type: disc;
+    margin-left: 20px;
+    text-align: left; /* Align the text to the left */
+}
+
+.additional-tips li {
+    margin-bottom: 8px;
+    font-size: large;
+}
+
+/* Ensure the logo stays on the right side */
+.logo-right {
+    position: absolute;
+    right: 0px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.logo-img {
+    width: 100px; /* Adjust size as needed */
+    height: auto;
+}
+
+
+
+/* Hide the shopping list by default */
+.shopping-list {
+    display: none;
+    padding: 20px;
+    background-color: #f4f4f4;
+}
+
+.shopping-category {
+    margin-bottom: 20px;
+}
+
+.shopping-category h3 {
+    color: black;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.shopping-category ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.shopping-category li {
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+/* Button Styles */
+.shopping-list-btn {
+    background-color: #4CAF50;
+    color: white;
+    font-size: 20px;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+.shopping-list-btn:hover {
+    background-color: #45a049;
+}
+
+/* Show shopping list on hover in desktop mode */
+@media (min-width: 769px) {
+    .shopping-list-btn:hover + .shopping-list {
+        display: block;
+    }
+}
+
+/* Mobile Mode - Show on click */
+@media (max-width: 768px) {
+    .shopping-list {
+        display: none; /* Ensure it's hidden initially */
+        padding: 20px;
+    }
+}
+.scroll-box {
+    position: sticky; /* Makes it stick to the top */
+    top: 0; /* Sticks the box at the top of the viewport */
+    z-index: 1000; /* Ensures it stays above other elements */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    padding: 10px;
+    background-color: transparent;
+    /* border-bottom: 2px solid #ddd; */
+    opacity: 0.8; /* Adds a subtle border for separation */
+    /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); */
+    overflow: hidden;
+}
+
+.scroll-box button {
+    flex: 1 1 100px;
+    padding: 10px 15px;
+    font-size: 14px;
+    font-weight: bold;
+    background-color: black;
+    opacity: 0.8;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    text-align: center;
+    overflow: hidden;
+}
+
+.scroll-box button:hover {
+    background-color: #0056b3;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+    .scroll-box {
+        gap: 5px; /* Reduced spacing between buttons */
+        overflow: hidden;
+    }
+
+    .scroll-box button {
+        flex: 1 1 calc(50% - 10px); /* Two buttons in one row */
+        padding: 10px;
+        font-size: 12px;
+        overflow: hidden;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .breakfast-container, 
+    .lunch-container, 
+    .dinner-container, 
+    .before-bed-container {
+        margin-bottom: 60px; /* Increased spacing below each section for mobile */
+    }
+}
